@@ -47,8 +47,6 @@ class RolesAndAdminSeeder extends Seeder
         );
         $superAdmin->assignRole('super_admin');
 
-        // Par défaut, Jetstream crée une "Personal Team" pour chaque nouvel utilisateur.
-        // Cette équipe personnelle peut être notre premier "Établissement" si nécessaire.
-        // Le super_admin, étant le premier, aura sa propre "équipe" associée par Jetstream.
+        
     }
 }

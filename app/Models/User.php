@@ -66,4 +66,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Relation : un utilisateur peut créer/posséder plusieurs établissements
+    public function establishments()
+    {
+        return $this->hasMany(Establishment::class);
+    }
 }

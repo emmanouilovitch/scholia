@@ -44,7 +44,7 @@ return [
     |
     */
 
-    'guard' => 'sanctum',
+    'guard' => 'web',
 
     /*
     |--------------------------------------------------------------------------
@@ -61,7 +61,7 @@ return [
         // Features::termsAndPrivacyPolicy(),
         // Features::profilePhotos(),
         // Features::api(),
-        // Features::teams(['invitations' => true]),
+        Features::teams(['invitations' => true]),
         Features::accountDeletion(),
     ],
 
@@ -78,4 +78,17 @@ return [
 
     'profile_photo_disk' => 'public',
 
+
+    /*
+|--------------------------------------------------------------------------
+| Team Model
+|--------------------------------------------------------------------------
+|
+| When using the Jetstream "Teams" feature, you may specify which Eloquent
+| model should be used to represent your teams. This allows you to use
+| your own custom Team model if you wish.
+|
+*/
+
+    'team_model' => App\Models\Establishment::class, 
 ];
